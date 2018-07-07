@@ -29,6 +29,7 @@ namespace Proj.Alfhr
         {
             //아이디와 비번이 입력되어있는지 확인하는 구문
             bool canlogin = true;
+            InfoLabel.Content = "";
             IDInfoLabel.Content = "";
             PWInfoLabel.Content = "";
             if (ID_TB.Text.Equals(""))
@@ -46,7 +47,27 @@ namespace Proj.Alfhr
                 return;
             }
             //아이디와 비번이 입력되어있는지 확인하는 구문 끝
-            this.NavigationService.Navigate(new LauncherPage());
+
+            bool logined = Mojang.Login(ID_TB.Text, PW_TB.Password);
+            if (logined)
+            {
+                this.NavigationService.Navigate(new LauncherPage());
+            }
+            else
+            {
+                switch (Mojang.Errorcode)
+                {
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 3:
+                        InfoLabel.Content = "알수없는 에러! 다시 시도해주세요 에러코드:" + Mojang.Errorcode;
+                        break;
+                    case 4:
+                        InfoLabel.Content = "아이디/비밀번호가 맞는지 다시 시도해주세요 에러코드:" + Mojang.Errorcode;
+                        break;
+                }
+            }
         }
     }
 }

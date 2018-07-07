@@ -17,6 +17,7 @@
         <PasswordBox x:Name="PW_TB" HorizontalAlignment="Left" Margin="123,298,0,0" VerticalAlignment="Top" Width="200" TabIndex="2"/>
         <Label x:Name="IDInfoLabel" Content="" HorizontalAlignment="Left" Margin="123,274,0,0" VerticalAlignment="Top" Width="200" FontSize="8" Background="White" Foreground="#DDFF0000"/>
         <Label x:Name="PWInfoLabel" Content="" HorizontalAlignment="Left" Margin="123,323,0,0" VerticalAlignment="Top" Width="200" FontSize="8" Background="White" Foreground="#DDFF0000"/>
+        <Label x:Name="InfoLabel" Content="" HorizontalAlignment="Left" Margin="123,407,0,0" VerticalAlignment="Top" Width="400" Foreground="#DDFF0000"/>
 
     </Grid>
 </Page>

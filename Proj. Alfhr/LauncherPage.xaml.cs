@@ -23,6 +23,7 @@ namespace Proj.Alfhr
         public LauncherPage()
         {
             InitializeComponent();
+            PlayerLabel.Content = "Hello, World! 안녕하세요" + Mojang.Name + " 님!";
         }
     }
 }
