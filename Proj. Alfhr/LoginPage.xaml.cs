@@ -25,7 +25,7 @@ namespace Proj.Alfhr
             InitializeComponent();
         }
 
-        private void Login_button_Click(object sender, RoutedEventArgs e)
+        private async void Login_button_Click(object sender, RoutedEventArgs e)
         {
             //아이디와 비번이 입력되어있는지 확인하는 구문
             bool canlogin = true;
@@ -48,7 +48,7 @@ namespace Proj.Alfhr
             }
             //아이디와 비번이 입력되어있는지 확인하는 구문 끝
 
-            bool logined = Mojang.Login(ID_TB.Text, PW_TB.Password);
+            bool logined = await Mojang.Login(ID_TB.Text, PW_TB.Password);
             if (logined)
             {
                 this.NavigationService.Navigate(new LauncherPage());

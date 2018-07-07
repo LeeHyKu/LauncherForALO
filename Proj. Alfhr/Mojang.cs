@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,28 +18,21 @@ namespace Proj.Alfhr
         public static String AT;
         public static String Name;
         public static int Errorcode;
-        public static Boolean Login(String Id,String Pw)
+        public static async Task<Boolean> Login(String Id, String Pw)
         {
             Errorcode = 0;
             String ReqRes;
             Boolean result = false;
             try
             {
-                var req = WebRequest.Create("https://authserver.mojang.com/authenticate");
-                req.Proxy = null;
-                req.Method = "POST";
-                req.ContentType = "application/json";
-                
+                String uri = "https://authserver.mojang.com/authenticate";
                 String PostString = "{ \"agent\" : { \"name\" : \"Minecraft\" , \"version\" : 1 }, \"username\" : \"" + Id + "\", \"password\" : \"" + Pw + "\", \"clientToken\" : \"\"}";
-                byte[] reqData = Encoding.UTF8.GetBytes(PostString);
-                req.ContentLength = reqData.Length;
-                using (Stream reqStream = req.GetRequestStream())
-                    reqStream.Write(reqData, 0, reqData.Length);
 
-                using (WebResponse res = req.GetResponse())
-                using (Stream resSteam = res.GetResponseStream())
-                using (StreamReader sr = new StreamReader(resSteam))
-                    ReqRes = sr.ReadToEnd();
+                var req = new HttpClient();
+                var content = new StringContent( PostString, Encoding.UTF8, "application/json");
+                var reponse = await req.PostAsync(uri, content);
+                reponse.EnsureSuccessStatusCode();
+                ReqRes = await reponse.Content.ReadAsStringAsync();
 
                 dynamic ResData = JObject.Parse(ReqRes);
 
