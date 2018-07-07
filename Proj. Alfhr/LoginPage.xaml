@@ -6,18 +6,17 @@
       xmlns:local="clr-namespace:Proj.Alfhr"
       mc:Ignorable="d" 
       d:DesignHeight="511" d:DesignWidth="954"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       Title="LoginPage">
 
     <Grid Background="White">
         <Image Source="Login_Pic.png" Stretch="Fill"/>
-
         <Image Margin="73,134.25,581,300.25" Source="Logo.png" Stretch="Fill" Width="300" Height="76.5"/>
-        <TextBox x:Name="ID_TB" HorizontalAlignment="Left" Height="24" Margin="123,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TabIndex="1"/>
+        <TextBox x:Name="ID_TB" HorizontalAlignment="Left" Height="24" Margin="123,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TabIndex="1" materialDesign:HintAssist.Hint="Email"/>
+        <PasswordBox x:Name="PW_TB" HorizontalAlignment="Left" Margin="123,298,0,0" VerticalAlignment="Top" Width="200" TabIndex="2" materialDesign:HintAssist.Hint="Password" />
         <Button x:Name="Login_button" Content="L O G I N" HorizontalAlignment="Left" Margin="123,370,0,0" VerticalAlignment="Top" Width="200" Background="#FF49F4C3" BorderBrush="#FF49F4C3" TabIndex="3" Click="Login_button_Click"/>
-        <PasswordBox x:Name="PW_TB" HorizontalAlignment="Left" Margin="123,298,0,0" VerticalAlignment="Top" Width="200" TabIndex="2"/>
         <Label x:Name="IDInfoLabel" Content="" HorizontalAlignment="Left" Margin="123,274,0,0" VerticalAlignment="Top" Width="200" FontSize="8" Background="White" Foreground="#DDFF0000"/>
         <Label x:Name="PWInfoLabel" Content="" HorizontalAlignment="Left" Margin="123,323,0,0" VerticalAlignment="Top" Width="200" FontSize="8" Background="White" Foreground="#DDFF0000"/>
         <Label x:Name="InfoLabel" Content="" HorizontalAlignment="Left" Margin="123,407,0,0" VerticalAlignment="Top" Width="400" Foreground="#DDFF0000"/>
-
     </Grid>
 </Page>
