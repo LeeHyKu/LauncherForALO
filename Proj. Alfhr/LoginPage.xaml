@@ -9,7 +9,7 @@
       Title="LoginPage">
 
     <Grid>
-        <Image Margin="0,0,-8,0" Source="Login_Pic.png" Stretch="Fill"/>
+        <Image Source="Login_Pic.png" Stretch="Fill"/>
 
         <Image Margin="73,134.25,581,300.25" Source="Logo.png" Stretch="Fill" Width="300" Height="76.5"/>
         <TextBox x:Name="ID_TB" HorizontalAlignment="Left" Height="24" Margin="123,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" TabIndex="1"/>
