@@ -16,16 +16,16 @@ using System.Windows.Shapes;
 namespace Proj.Alfhr
 {
     /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
+    /// LoginPage.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoginPage : Page
     {
-        public MainWindow()
+        public LoginPage()
         {
             InitializeComponent();
         }
 
-        /*private void Login_button_Click(object sender, RoutedEventArgs e)
+        private void Login_button_Click(object sender, RoutedEventArgs e)
         {
             //아이디와 비번이 입력되어있는지 확인하는 구문
             bool canlogin = true;
@@ -46,7 +46,7 @@ namespace Proj.Alfhr
                 return;
             }
             //아이디와 비번이 입력되어있는지 확인하는 구문 끝
-
-        }*/
+            this.NavigationService.Navigate(new LauncherPage());
+        }
     }
 }
