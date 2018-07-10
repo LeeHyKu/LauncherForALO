@@ -8,6 +8,13 @@
         mc:Ignorable="d"
         Title="Alfheimr Online" Height="540" Width="960" ResizeMode="NoResize">
     <Grid>
-        <Frame Name="MainFrame" Content="" NavigationUIVisibility="Hidden" Source="/Proj.Alfhr;component/LoginPage.xaml"/>
+        <materialDesign:Transitioner Name="MainTransitioner"  SelectedIndex="0">
+            <materialDesign:TransitionerSlide OpeningEffect="{materialDesign:TransitionEffect FadeIn}">
+                <local:LoginControl x:Name="LoginCtrl"/>
+            </materialDesign:TransitionerSlide>
+            <materialDesign:TransitionerSlide OpeningEffect="{materialDesign:TransitionEffect FadeIn}">
+                <local:LauncherControl x:Name="LauncherCtrl"/>
+            </materialDesign:TransitionerSlide>
+        </materialDesign:Transitioner>
     </Grid>
 </Window>

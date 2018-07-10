@@ -78,7 +78,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="LauncherControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LauncherPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LoginControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -94,8 +102,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="LauncherControl.xaml.cs">
+      <DependentUpon>LauncherControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LauncherPage.xaml.cs">
       <DependentUpon>LauncherPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LoginControl.xaml.cs">
+      <DependentUpon>LoginControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
@@ -150,6 +164,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Login_Pic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="대지 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ico_account.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ico_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ico_logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ico_setting.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

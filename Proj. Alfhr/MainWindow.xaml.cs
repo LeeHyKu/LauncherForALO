@@ -23,30 +23,8 @@ namespace Proj.Alfhr
         public MainWindow()
         {
             InitializeComponent();
+            LoginCtrl.mainwindow = this;
+            LauncherCtrl.mainwindow = this;
         }
-
-        /*private void Login_button_Click(object sender, RoutedEventArgs e)
-        {
-            //아이디와 비번이 입력되어있는지 확인하는 구문
-            bool canlogin = true;
-            IDInfoLabel.Content = "";
-            PWInfoLabel.Content = "";
-            if (ID_TB.Text.Equals(""))
-            {
-                IDInfoLabel.Content = "아이디를 입력해주세요";
-                canlogin = false;
-            }
-            if (PW_TB.Password.Equals(""))
-            {
-                PWInfoLabel.Content = "비밀번호를 입력해주세요";
-                canlogin = false;
-            }
-            if (!canlogin)
-            {
-                return;
-            }
-            //아이디와 비번이 입력되어있는지 확인하는 구문 끝
-
-        }*/
     }
 }

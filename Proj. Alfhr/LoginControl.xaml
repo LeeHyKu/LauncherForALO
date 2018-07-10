@@ -1,13 +1,12 @@
-﻿<Page x:Class="Proj.Alfhr.LoginPage"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Proj.Alfhr"
-      mc:Ignorable="d" 
-      d:DesignHeight="511" d:DesignWidth="954"
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      Title="LoginPage">
+﻿<UserControl x:Class="Proj.Alfhr.LoginControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Proj.Alfhr"
+             mc:Ignorable="d" 
+             d:DesignHeight="511" d:DesignWidth="954"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
 
     <Grid Background="White">
         <Image Source="Login_Pic.png" Stretch="Fill"/>
@@ -19,4 +18,4 @@
         <Label x:Name="PWInfoLabel" Content="" HorizontalAlignment="Left" Margin="123,323,0,0" VerticalAlignment="Top" Width="200" FontSize="8" Background="White" Foreground="#DDFF0000"/>
         <Label x:Name="InfoLabel" Content="" HorizontalAlignment="Left" Margin="123,407,0,0" VerticalAlignment="Top" Width="400" Foreground="#DDFF0000"/>
     </Grid>
-</Page>
+</UserControl>
