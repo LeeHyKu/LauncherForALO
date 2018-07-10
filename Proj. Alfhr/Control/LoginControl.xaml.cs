@@ -22,6 +22,7 @@ namespace Proj.Alfhr
     public partial class LoginControl : UserControl
     {
         public MainWindow mainwindow;
+        public LauncherControl launchercontrol;
 
         public LoginControl()
         {
@@ -35,12 +36,12 @@ namespace Proj.Alfhr
             InfoLabel.Content = "";
             IDInfoLabel.Content = "";
             PWInfoLabel.Content = "";
-            if (ID_Textbox.Text.Equals(""))
+            if (String.IsNullOrWhiteSpace(ID_Textbox.Text))
             {
                 IDInfoLabel.Content = "아이디를 입력해주세요";
                 canlogin = false;
             }
-            if (Password_Textbox.Password.Equals(""))
+            if (String.IsNullOrWhiteSpace(Password_Textbox.Password))
             {
                 PWInfoLabel.Content = "비밀번호를 입력해주세요";
                 canlogin = false;
@@ -54,6 +55,7 @@ namespace Proj.Alfhr
             bool logined = await Mojang.Login(ID_Textbox.Text, Password_Textbox.Password);
             if (logined)
             {
+                launchercontrol.Initialize();
                 mainwindow.MainTransitioner.SelectedIndex = 1;
             }
             else

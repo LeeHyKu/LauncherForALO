@@ -27,6 +27,11 @@ namespace Proj.Alfhr
             InitializeComponent();
         }
 
+        public void Initialize()
+        {
+            PlayerNameLabel.Content = Mojang.Name;
+        }
+
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
 

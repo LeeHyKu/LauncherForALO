@@ -10,12 +10,12 @@
 
     <Grid Background="White">
         <Image Margin="5,8,5,428" Source="/Proj.Alfhr;component/Resource/profile.png" Stretch="Fill"/>
-        <Label x:Name="PlayerNameLabel" Content=" PlayerName" HorizontalAlignment="Left" Margin="60,33,0,0" VerticalAlignment="Top" Width="136" Background="{x:Null}" Foreground="Black" FontWeight="Bold"/>
-        <Label x:Name="LevelLabel" Content="Lv.9999" HorizontalAlignment="Left" Margin="196,37,0,0" VerticalAlignment="Top" Width="52" Background="{x:Null}" Foreground="#FF383838" FontSize="8"/>
-        <Image x:Name="Icon_List" Margin="815,37,120,456" Source="/Proj.Alfhr;component/Resource/ico_list.png" Stretch="Fill"/>
-        <Image Margin="840,37,96,456" Source="/Proj.Alfhr;component/Resource/ico_account.png" Stretch="Fill"/>
-        <Image Margin="889,37,47,456" Source="/Proj.Alfhr;component/Resource/ico_logout.png" Stretch="Fill"/>
-        <Image Margin="864,37,72,456" Source="/Proj.Alfhr;component/Resource/ico_setting.png" Stretch="Fill"/>
+        <Label x:Name="PlayerNameLabel" Content=" PlayerName" HorizontalAlignment="Left" Margin="60,28,0,0" VerticalAlignment="Top" Width="136" Background="{x:Null}" Foreground="Black" FontWeight="Bold"/>
+        <Label x:Name="LevelLabel" Content="Lv.9999" HorizontalAlignment="Left" Margin="196,32,0,0" VerticalAlignment="Top" Width="52" Background="{x:Null}" Foreground="#FF383838" FontSize="8"/>
+        <Image x:Name="Icon_List" Margin="780,31,142,450" Source="/Proj.Alfhr;component/Resource/ico_list.png" Stretch="Fill"/>
+        <Image Margin="817,31,107,450" Source="/Proj.Alfhr;component/Resource/ico_account.png" Stretch="Fill"/>
+        <Image Margin="887,31,37,450" Source="/Proj.Alfhr;component/Resource/ico_logout.png" Stretch="Fill"/>
+        <Image Margin="852,31,72,450" Source="/Proj.Alfhr;component/Resource/ico_setting.png" Stretch="Fill" RenderTransformOrigin="1.431,0.319"/>
         <Button Name="StartButton" Content="L I N K  S T A R T" HorizontalAlignment="Left" Margin="333,447,0,0" VerticalAlignment="Top" Width="288" Height="40" Background="#FF44E2B4" Foreground="White" BorderBrush="#FF44E4B6" Click="StartButton_Click"/>
         <materialDesign:Transitioner x:Name="LauncherInfoTransitioner" HorizontalAlignment="Left" Height="378" Margin="18,64,0,0" VerticalAlignment="Top" Width="918"/>
     </Grid>

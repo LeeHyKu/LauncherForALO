@@ -105,6 +105,7 @@
     <Compile Include="Control\LauncherControl.xaml.cs">
       <DependentUpon>LauncherControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Class\Mincraft.cs" />
     <Compile Include="Deprecated\LauncherPage.xaml.cs">
       <DependentUpon>LauncherPage.xaml</DependentUpon>
     </Compile>
