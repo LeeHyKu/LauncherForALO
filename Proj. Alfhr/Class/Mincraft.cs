@@ -11,7 +11,17 @@ namespace Proj.Alfhr.Control
         private static String ClientPath = "";
         private static String Command = "";
 
-        public static async Task Launch()
+        private static Task LaunchAsync()
+        {
+            return Task.Run(() => Launch());
+        }
+
+        public static void Launch()
+        {
+
+        }
+
+        public static async Task Update()
         {
 
         }
