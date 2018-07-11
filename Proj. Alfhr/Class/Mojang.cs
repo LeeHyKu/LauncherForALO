@@ -13,9 +13,9 @@ namespace Proj.Alfhr
     class Mojang
     {
         public static String ID;
-        public static String PW;
+        public static String Password;
         public static String UUID;
-        public static String AT;
+        public static String AccessToken;
         public static String Name;
         public static int Errorcode;
         public static async Task<Boolean> Login(String Id, String Pw)
@@ -60,8 +60,8 @@ namespace Proj.Alfhr
 
                 result = true;
                 ID = Id;
-                PW = Pw;
-                AT = ResData.accessToken;
+                Password = Pw;
+                AccessToken = ResData.accessToken;
                 UUID = ResData.selectedProfile.id;
                 Name = ResData.selectedProfile.name;
                 return result;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proj.Alfhr.Control;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,9 +33,9 @@ namespace Proj.Alfhr
             PlayerNameLabel.Content = Mojang.Name;
         }
 
-        private void StartButton_Click(object sender, RoutedEventArgs e)
+        private async void StartButton_Click(object sender, RoutedEventArgs e)
         {
-
+            await Mincraft.LaunchAsync();
         }
     }
 }
