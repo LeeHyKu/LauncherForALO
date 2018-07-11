@@ -71,6 +71,9 @@ namespace Proj.Alfhr
                     case 4:
                         InfoLabel.Content = $"아이디/비밀번호가 맞는지 다시 시도해주세요 에러코드:{Mojang.Errorcode}";
                         break;
+                    default:
+                        InfoLabel.Content = $"알수없는 에러! 잠시후에 시도해주세요 에러코드:{Mojang.Errorcode}";
+                        break;
                 }
             }
         }

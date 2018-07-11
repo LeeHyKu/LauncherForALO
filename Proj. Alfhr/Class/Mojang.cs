@@ -67,9 +67,14 @@ namespace Proj.Alfhr
                 return result;
 
             }
-            catch(Exception)
+            catch(IOException)
             {
                 Errorcode = 1;
+                return false;
+            }
+            catch (Exception)
+            {
+                Errorcode = 5;
                 return false;
             }
         }
