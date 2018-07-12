@@ -35,7 +35,76 @@ namespace Proj.Alfhr
 
         private async void StartButton_Click(object sender, RoutedEventArgs e)
         {
+            StartButton.IsEnabled = false;
+            if(!await Mincraft.ChackLastestVersionAsync())
+            {
+                StatusLabel.Content = "업데이트중입니다 잠시만 기다려주세요...";
+                await Mincraft.UpdateAsync();
+            }
+            StatusLabel.Content = "실행중입니다 잠시만 기다려주세요...";
             await Mincraft.LaunchAsync();
+            StartButton.IsEnabled = true;
+            StatusLabel.Content = "";
+        }
+
+        private void Icon_List_MouseEnter(object sender, RoutedEventArgs e)
+        {
+            Icon_List.Source = new BitmapImage(new Uri(@"pack://application:,,,/Proj.Alfhr;component/Resource/ico_listhighlighted.png"));
+        }
+
+        private void Icon_Profile_MouseEnter(object sender, RoutedEventArgs e)
+        {
+            Icon_Profile.Source = new BitmapImage(new Uri(@"pack://application:,,,/Proj.Alfhr;component/Resource/ico_accounthighlighted.png"));
+        }
+
+        private void Icon_Setting_MouseEnter(object sender, RoutedEventArgs e)
+        {
+            Icon_Setting.Source = new BitmapImage(new Uri(@"pack://application:,,,/Proj.Alfhr;component/Resource/ico_settingshighlighted.png"));
+        }
+
+        private void Icon_Exit_MouseEnter(object sender, RoutedEventArgs e)
+        {
+            Icon_Exit.Source = new BitmapImage(new Uri(@"pack://application:,,,/Proj.Alfhr;component/Resource/ico_exithighlighted.png"));
+        }
+
+        private void Icon_List_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Icon_List.Source = new BitmapImage(new Uri(@"pack://application:,,,/Proj.Alfhr;component/Resource/ico_list.png"));
+        }
+
+        private void Icon_Profile_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Icon_Profile.Source = new BitmapImage(new Uri(@"pack://application:,,,/Proj.Alfhr;component/Resource/ico_account.png"));
+        }
+
+        private void Icon_Setting_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Icon_Setting.Source = new BitmapImage(new Uri(@"pack://application:,,,/Proj.Alfhr;component/Resource/ico_setting.png"));
+        }
+
+        private void Icon_Exit_MouseLeave(object sender, MouseEventArgs e)
+        {
+            Icon_Exit.Source = new BitmapImage(new Uri(@"pack://application:,,,/Proj.Alfhr;component/Resource/ico_logout.png"));
+        }
+
+        private void Icon_List_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Icon_Profile_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Icon_Setting_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Icon_Exit_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            
         }
     }
 }

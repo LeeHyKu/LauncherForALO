@@ -18,9 +18,11 @@ namespace Proj.Alfhr
         public static String AccessToken;
         public static String Name;
         public static int Errorcode;
+        public static String Error;
         public static async Task<Boolean> Login(String Id, String Pw)
         {
             Errorcode = 0;
+            Error = "";
             String ReqRes;
             Boolean result = false;
             try
@@ -36,26 +38,13 @@ namespace Proj.Alfhr
 
                 dynamic ResData = JObject.Parse(ReqRes);
 
-                String error = ResData.error;
-                if(error != null)
+                
+                if(!(String.IsNullOrEmpty(ResData.error)))
                 {
-                    if(error.Equals("Method Not Allowed"))
-                    {
-                        Errorcode = 3;
-                        return result;
-                    } else if (
-                        error.Equals("IllegalArgumentException")|
-                        error.Equals("ForbiddenOperationException")
-                        )
-                    {
-                        Errorcode = 4;
-                        return result;
-                    }
-                    else
-                    {
-                        Errorcode = 2;
-                        return result;
-                    }
+                    String error = ResData.error;
+                    Errorcode = 3;
+                    Error = error;
+                    return false;
                 }
 
                 result = true;
@@ -74,7 +63,7 @@ namespace Proj.Alfhr
             }
             catch (Exception)
             {
-                Errorcode = 5;
+                Errorcode = 2;
                 return false;
             }
         }

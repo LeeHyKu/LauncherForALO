@@ -62,17 +62,14 @@ namespace Proj.Alfhr
             {
                 switch (Mojang.Errorcode)
                 {
-                    case 0:
                     case 1:
+                        InfoLabel.Content = $"인터넷이 연결되어있는지 확인해주세요 에러코드:{Mojang.Errorcode}";
+                        break;
                     case 2:
+                        InfoLabel.Content = $"잠시후에 시도해주세요 에러코드:{Mojang.Errorcode},{Mojang.Error}";
+                        break;
                     case 3:
-                        InfoLabel.Content = $"알수없는 에러! 다시 시도해주세요 에러코드:{Mojang.Errorcode}";
-                        break;
-                    case 4:
-                        InfoLabel.Content = $"아이디/비밀번호가 맞는지 다시 시도해주세요 에러코드:{Mojang.Errorcode}";
-                        break;
-                    default:
-                        InfoLabel.Content = $"알수없는 에러! 잠시후에 시도해주세요 에러코드:{Mojang.Errorcode}";
+                        InfoLabel.Content = $"아이디/비밀번호가 맞는지 다시 시도해주세요 에러코드:{Mojang.Errorcode},{Mojang.Error}";
                         break;
                 }
             }
