@@ -47,6 +47,7 @@ namespace Proj.Alfhr
             StatusLabel.Content = "";
         }
 
+        //안쓸수도 있는것들
         private void Icon_List_MouseEnter(object sender, RoutedEventArgs e)
         {
             Icon_List.Source = new BitmapImage(new Uri(@"pack://application:,,,/Proj.Alfhr;component/Resource/ico_listhighlighted.png"));
