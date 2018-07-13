@@ -68,7 +68,7 @@ namespace Proj.Alfhr
             {
                 dynamic Data = JObject.Parse(JsonString);
                 String Token = Data.AccessToken;
-                if (await ChackToken(Token))
+                if (await CheckToken(Token))
                 {
                     result = 1;
                     try
@@ -152,7 +152,7 @@ namespace Proj.Alfhr
                 return false;
             }
         }
-        public static async Task<Boolean> ChackToken(String Token)
+        public static async Task<Boolean> CheckToken(String Token)
         {
             bool result = false;
             try
@@ -206,7 +206,7 @@ namespace Proj.Alfhr
                 }
                 return result;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }
