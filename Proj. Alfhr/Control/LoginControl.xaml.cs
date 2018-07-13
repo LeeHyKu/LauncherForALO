@@ -29,6 +29,30 @@ namespace Proj.Alfhr
             InitializeComponent();
         }
 
+        private async void UserControl_Initialized(object sender, EventArgs e)
+        {
+            int LoadData = await Mojang.LoadDataAsync();
+            switch (LoadData)
+            {
+                case 1:
+                    mainwindow.MainTransitioner.SelectedIndex = 1;
+                    break;
+                case 2:
+                    if(await Mojang.Refresh())
+                    {
+                        mainwindow.MainTransitioner.SelectedIndex = 1;
+                    }
+                    else
+                    {
+                        ID_Textbox.Text = Mojang.ID;
+                        Password_Textbox.Password = Mojang.Password;
+                    }
+                    break;
+                case 3:
+                    break;
+            }
+        }
+
         private async void Login_button_Click(object sender, RoutedEventArgs e)
         {
             //아이디와 비번이 입력되어있는지 확인하는 구문
@@ -57,6 +81,7 @@ namespace Proj.Alfhr
             {
                 launchercontrol.Initialize();
                 mainwindow.MainTransitioner.SelectedIndex = 1;
+                await Mojang.SaveDataAsync();
             }
             else
             {

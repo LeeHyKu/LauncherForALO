@@ -38,7 +38,7 @@ namespace Proj.Alfhr.Control
 
         private static void Launch(Label StatusLabel)
         {
-			StatusLabel.Dispatcher.Invoke(new Action(() => { StatusLabel.Content = "실행중..."; }));
+            StatusLabel.Dispatcher.Invoke(new Action(() => { StatusLabel.Content = "실행중..."; }));
 			ProcessStartInfo Launch = new ProcessStartInfo
             {
                 FileName = $"{ClientPath}\\runtime\\bin\\java.exe",
@@ -56,8 +56,8 @@ namespace Proj.Alfhr.Control
 			StatusLabel.Dispatcher.Invoke(new Action(() => { StatusLabel.Content = "설치중..."; }));
 			String TempFilePath = Path.GetTempFileName();
             var request = new WebClient();
-			//request.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressCallback);
-			request.DownloadFile/*Async(new Uri(*/"https://s3.ap-northeast-2.amazonaws.com/alfheimr/Minecraft/DATA.zip"/*)*/, TempFilePath);
+            //request.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressCallback);
+            request.DownloadFile/*Async(new Uri*/("https://s3.ap-northeast-2.amazonaws.com/alfheimr/Minecraft/DATA.zip"/*)*/, TempFilePath);
             try
             {
                 Directory.Delete("DATA",true);

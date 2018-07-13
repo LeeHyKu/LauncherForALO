@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:Proj.Alfhr"
              mc:Ignorable="d" 
              d:DesignHeight="511" d:DesignWidth="954"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             Initialized="UserControl_Initialized">
 
     <Grid Background="White">
         <Image Source="/Proj.Alfhr;component/Resource/Login_Pic.png" Stretch="Fill"/>
