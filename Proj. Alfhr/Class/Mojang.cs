@@ -163,7 +163,7 @@ namespace Proj.Alfhr
                 var req = new HttpClient();
                 var content = new StringContent(PostString, Encoding.UTF8, "application/json");
                 var reponse = await req.PostAsync(uri, content);
-                if (reponse.StatusCode == HttpStatusCode.NoContent)
+                if (reponse.StatusCode.Equals(HttpStatusCode.NoContent))
                 {
                     result = true;
                 }
