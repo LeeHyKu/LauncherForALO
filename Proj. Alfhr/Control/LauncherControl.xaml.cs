@@ -39,10 +39,10 @@ namespace Proj.Alfhr
             if(!await Mincraft.ChackLastestVersionAsync())
             {
                 StatusLabel.Content = "업데이트중입니다 잠시만 기다려주세요...";
-                await Mincraft.UpdateAsync();
+                await Mincraft.UpdateAsync(StatusLabel);
             }
             StatusLabel.Content = "실행중입니다 잠시만 기다려주세요...";
-            await Mincraft.LaunchAsync();
+            await Mincraft.LaunchAsync(StatusLabel);
             StartButton.IsEnabled = true;
             StatusLabel.Content = "";
         }
