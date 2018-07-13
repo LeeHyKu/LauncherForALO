@@ -42,7 +42,7 @@ namespace Proj.Alfhr
                     $"\"UUID\" : \"{UUID}\"," +
                     $"\"AccessToken\" : \"{AccessToken}\"" +
                 "}";
-            File.WriteAllText("DATA\\USER_I.nfo", JsonString);
+            File.WriteAllText("USER.info", JsonString);
         }
         public static async Task<int> LoadDataAsync()
         {
@@ -56,7 +56,7 @@ namespace Proj.Alfhr
 
             try
             {
-                JsonString = File.ReadAllText("DATA\\USER_I.nfo");
+                JsonString = File.ReadAllText("USER.info");
             }
             catch (Exception)
             {
