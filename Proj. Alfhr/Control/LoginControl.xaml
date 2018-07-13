@@ -16,6 +16,6 @@
         <Button x:Name="Login_button" Content="L O G I N" HorizontalAlignment="Left" Margin="123,370,0,0" VerticalAlignment="Top" Width="200" Background="#FF49F4C3" BorderBrush="#FF49F4C3" TabIndex="3" Click="Login_button_Click" IsDefault="True"/>
         <Label x:Name="IDInfoLabel" Content="" HorizontalAlignment="Left" Margin="123,274,0,0" VerticalAlignment="Top" Width="200" FontSize="8" Background="{x:Null}" Foreground="#DDFF0000"/>
         <Label x:Name="PWInfoLabel" Content="" HorizontalAlignment="Left" Margin="123,323,0,0" VerticalAlignment="Top" Width="200" FontSize="8" Background="{x:Null}" Foreground="#DDFF0000"/>
-        <Label x:Name="InfoLabel" Content="" HorizontalAlignment="Left" Margin="123,407,0,0" VerticalAlignment="Top" Width="400" Foreground="#DDFF0000"/>
+        <Label x:Name="InfoLabel" Content="" HorizontalAlignment="Left" Margin="123,407,0,0" VerticalAlignment="Top" Width="831" Foreground="#DDFF0000"/>
     </Grid>
 </UserControl>

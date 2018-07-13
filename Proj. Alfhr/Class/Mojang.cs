@@ -33,37 +33,36 @@ namespace Proj.Alfhr
                 var req = new HttpClient();
                 var content = new StringContent( PostString, Encoding.UTF8, "application/json");
                 var reponse = await req.PostAsync(uri, content);
-                reponse.EnsureSuccessStatusCode();
-                ReqRes = await reponse.Content.ReadAsStringAsync();
-
-                dynamic ResData = JObject.Parse(ReqRes);
-
-                
-                if(!(String.IsNullOrEmpty(ResData.error)))
-                {
-                    String error = ResData.error;
-                    Errorcode = 3;
-                    Error = error;
-                    return false;
-                }
-
-                result = true;
-                ID = Id;
-                Password = Pw;
-                AccessToken = ResData.accessToken;
-                UUID = ResData.selectedProfile.id;
-                Name = ResData.selectedProfile.name;
+				if(reponse.IsSuccessStatusCode)
+				{
+					ReqRes = await reponse.Content.ReadAsStringAsync();
+					dynamic ResData = JObject.Parse(ReqRes);
+					result = true;
+					ID = Id;
+					Password = Pw;
+					AccessToken = ResData.accessToken;
+					UUID = ResData.selectedProfile.id;
+					Name = ResData.selectedProfile.name;
+				}
+				else 
+				{
+					Errorcode = 3;
+					Error = "LoginError";
+					result = false;
+				}
                 return result;
 
             }
-            catch(IOException)
+            catch(IOException e)
             {
                 Errorcode = 1;
+				Error = e.Message;
                 return false;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 Errorcode = 2;
+				Error = e.Message;
                 return false;
             }
         }
