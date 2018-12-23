@@ -57,7 +57,7 @@ namespace Proj.Alfhr.Control
 			String TempFilePath = Path.GetTempFileName();
             var request = new WebClient();
             request.DownloadProgressChanged += new DownloadProgressChangedEventHandler(DownloadProgressCallback);
-            await request.DownloadFileTaskAsync(new Uri("https://s3.ap-northeast-2.amazonaws.com/alfheimr/Minecraft/DATA.zip"), TempFilePath);
+            await request.DownloadFileTaskAsync(new Uri(""), TempFilePath);
             try
             {
                 Directory.Delete(ClientPath,true);
@@ -88,7 +88,7 @@ namespace Proj.Alfhr.Control
             }
             String TempFilePath = Path.GetTempFileName();
             var request = new WebClient();
-            request.DownloadFile("https://s3.ap-northeast-2.amazonaws.com/alfheimr/Minecraft/Vers.ion", TempFilePath);
+            request.DownloadFile("", TempFilePath);
             String nowVersion = File.ReadAllText("DATA\\Vers.ion");
             String lastVersion = File.ReadAllText(TempFilePath);
             File.Delete(TempFilePath);
