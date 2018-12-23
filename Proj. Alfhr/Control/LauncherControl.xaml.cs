@@ -45,7 +45,7 @@ namespace Proj.Alfhr
             await Mincraft.LaunchAsync(StatusLabel);
             StartButton.IsEnabled = true;
             StatusLabel.Content = "";
-            System.Windows.Application.Current.Shutdown();
+            Application.Current.Shutdown();
         }
 
         //안쓸수도 있는것들
