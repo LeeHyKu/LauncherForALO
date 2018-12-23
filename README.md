@@ -26,3 +26,4 @@
 <td style="width: 52px; padding: 2px 4px 2px 0px; text-align: center;"><img alt="G-ral.jpg" src="https://i.uncyclopedia.kr/pedia/thumb/3/3f/G-ral.jpg/130px-G-ral.jpg" width="130" height="98" srcset="https://i.uncyclopedia.kr/pedia/thumb/3/3f/G-ral.jpg/195px-G-ral.jpg 1.5x, https://i.uncyclopedia.kr/pedia/thumb/3/3f/G-ral.jpg/260px-G-ral.jpg 2x">
 </td></tr></tbody>
 </table>
+이건 친구놈이 부탁해서 만든거시다 디자인은 친구의 팀원이 한거시다 옛날에 짠거라 코드가 개같아서 이걸 보는 너는 죽었다
